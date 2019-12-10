@@ -22,13 +22,26 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true,
+      "jest": true
+    },
     "extends": [
       "airbnb-typescript",
-      "airbnb/hooks",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      "airbnb/hooks"
     ],
     "rules": {
       "indent": [
@@ -39,6 +52,7 @@
         "error",
         "single"
       ],
+      "no-param-reassign": ["error", { "props": false }],
       "semi": "error",
       "sort-imports": [
         "error",
