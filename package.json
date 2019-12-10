@@ -59,7 +59,7 @@
         {
           "ignoreCase": false,
           "ignoreDeclarationSort": true,
-          "ignoreMemberSort": false,
+          "ignoreMemberSort": false,``
           "memberSyntaxSortOrder": [
             "none",
             "all",
