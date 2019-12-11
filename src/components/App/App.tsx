@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
+import history from '../../location';
 import logo from './logo.svg';
 import './App.css';
 
 const App: FC = () => (
-  <Router>
+  <Router history={history}>
     <Route exact path="/">
       <div className="App">
         <header className="App-header">
@@ -15,7 +16,7 @@ const App: FC = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-                        Learn React
+            Learn React
           </a>
         </header>
       </div>
