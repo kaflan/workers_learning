@@ -10,8 +10,11 @@
     "@types/node": "^12.12.16",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "history": "^4.10.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "typescript": "^3.7.3"
   },
@@ -52,14 +55,27 @@
         "error",
         "single"
       ],
-      "no-param-reassign": ["error", { "props": false }],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "**/*.ts"
+          ]
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ],
       "semi": "error",
       "sort-imports": [
         "error",
         {
           "ignoreCase": false,
           "ignoreDeclarationSort": true,
-          "ignoreMemberSort": false,``
+          "ignoreMemberSort": false,
           "memberSyntaxSortOrder": [
             "none",
             "all",
@@ -83,11 +99,15 @@
     ]
   },
   "devDependencies": {
+    "@types/history": "^4.7.3",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "axios": "^0.19.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0"
   }
 }
